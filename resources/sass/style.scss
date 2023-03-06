@@ -1,0 +1,130 @@
+@import "variables";
+
+body {
+    font-family: $font-family-sans-serif;
+    background: #f8fafc !important;
+    font-size: 14px !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+
+}
+
+.el-dialog {
+    @media screen and (max-width: $sm - 1) {
+        width: 100% !important;
+        border-radius: 0;
+    }
+
+    .el-dialog__header {
+        padding-right: 35px;
+    }
+
+    @media (max-width: $xs - 1) {
+        .el-form-item__label {
+            width: auto !important;
+        }
+        .el-form-item__content {
+            clear: both;
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.app {
+    > div.loading-screen {
+        height: 100vh;
+
+        > .loading-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+            > p {
+                text-shadow: 1px 1px 3px #000000;
+                font-size: calc(3vh + 2vw);
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+    margin: auto;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.header {
+    height: 60px;
+    line-height: 60px;
+    background: $color-primary;
+    color: #fff;
+    --el-header-padding: 0px !important;
+
+    .logo {
+        float: left;
+        height: 60px;
+        font-size: 22px;
+        padding:0 20px;
+        border-color: rgba(238, 241, 146, 0.3);
+        border-right-width: 1px;
+        border-right-style: solid;
+    }
+
+    .logo-width {
+        width: 190px;
+    }
+
+    .logo-collapse-width {
+        width: 23px;
+    }
+
+    .tools {
+        float: left;
+        div {
+            padding: 0 23px;
+            width: 14px;
+            height: 60px;
+            line-height: 60px;
+            cursor: pointer;
+        }
+    }
+
+    .userinfo {
+        float: right;
+        text-align: right;
+        padding-right: 35px;
+        .userinfo-inner {
+            cursor: pointer;
+            color: #fff;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                margin: 10px 0 10px 10px;
+                float: right;
+            }
+        }
+    }
+}
